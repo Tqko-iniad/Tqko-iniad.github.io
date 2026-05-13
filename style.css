@@ -1,0 +1,476 @@
+/* 全体の基本設定 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #18212f;
+  background-color: #ffffff;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ヘッダー */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.site-nav a {
+  color: #334155;
+}
+
+.site-nav a:hover {
+  color: #0f6b8f;
+}
+
+/* ヒーローセクション */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  min-height: 720px;
+  padding: 130px 8% 90px;
+  background:
+    linear-gradient(135deg, rgba(234, 248, 255, 0.95), rgba(255, 255, 255, 0.9)),
+    linear-gradient(90deg, #ffffff, #e7f6fb);
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-label,
+.section-label,
+.card-label,
+.category-label {
+  margin: 0 0 10px;
+  color: #0f6b8f;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 64px;
+  line-height: 1.15;
+}
+
+.hero-text {
+  margin: 24px 0 34px;
+  color: #475569;
+  font-size: 20px;
+}
+
+.primary-button {
+  display: inline-block;
+  min-width: 170px;
+  padding: 13px 24px;
+  color: #ffffff;
+  background-color: #0f6b8f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #095879;
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 360px;
+}
+
+.visual-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 20px 45px rgba(15, 49, 71, 0.15);
+  font-weight: bold;
+}
+
+.visual-card-main {
+  right: 20px;
+  width: 350px;
+  height: 240px;
+  background: linear-gradient(135deg, #0f6b8f, #56b3c6);
+  font-size: 28px;
+}
+
+/* ここに画像関連のデザインを書く */
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: #eaf7fb;
+}
+
+.image-frame img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-frame span {
+  position: relative;
+  z-index: 1;
+}
+
+.visual-card-small {
+  left: 20px;
+  bottom: 8px;
+  width: 240px;
+  height: 120px;
+  color: #0f3147;
+  background-color: #ffffff;
+  border: 1px solid #d9e8ef;
+}
+
+/* 共通セクション */
+.page-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 92px 24px;
+  scroll-margin-top: 80px;
+}
+
+.light-section {
+  max-width: none;
+  background-color: #f6f9fc;
+}
+
+.light-section > .section-heading,
+.light-section > .hobby-grid {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading {
+  margin-bottom: 36px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 38px;
+  line-height: 1.3;
+}
+
+/* About */
+.profile-area {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background-color: #f6f9fc;
+  border: 1px solid #e3e9ef;
+  border-radius: 6px;
+}
+
+.profile-area p {
+  margin: 0;
+  color: #475569;
+}
+
+.profile-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  color: #0f6b8f;
+  background:
+    linear-gradient(135deg, rgba(234, 248, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    linear-gradient(135deg, #d7edf4, #f8fbfd);
+  border: 1px solid #d7e8ef;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  min-height: 190px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e3e9ef;
+  border-radius: 6px;
+}
+
+.info-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+  color: #475569;
+}
+
+/* Hobby */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.hobby-card {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e1e8ef;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.hobby-card:hover,
+.hobby-card.is-selected {
+  transform: translateY(-6px);
+  border-color: #78bfd0;
+  box-shadow: 0 18px 35px rgba(15, 49, 71, 0.12);
+}
+
+.hobby-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+.anime-image {
+  background:
+    linear-gradient(135deg, rgba(15, 107, 143, 0.86), rgba(86, 179, 198, 0.78)),
+    repeating-linear-gradient(45deg, #c9edf4 0, #c9edf4 12px, #eaf7fb 12px, #eaf7fb 24px);
+}
+
+.game-image {
+  background:
+    linear-gradient(135deg, rgba(34, 75, 110, 0.9), rgba(93, 140, 163, 0.75)),
+    radial-gradient(circle at 30% 30%, #ffffff 0, #ffffff 9px, transparent 10px);
+}
+
+.hobby-body {
+  padding: 24px;
+}
+
+.hobby-body h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.hobby-body p:last-child {
+  margin-bottom: 0;
+  color: #475569;
+}
+
+/* Skill */
+.skill-intro {
+  max-width: 760px;
+  margin: 0 0 26px;
+  color: #475569;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skill-card {
+  min-width: 150px;
+  padding: 18px 22px;
+  color: #0f3147;
+  background-color: #f3f8fb;
+  border: 1px solid #d7e8ef;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* フッター */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px 8%;
+  color: #ffffff;
+  background-color: #152536;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.back-to-top {
+  padding: 10px 18px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* スマホ対応 */
+@media (max-width: 800px) {
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 150px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .hero-visual {
+    min-height: 260px;
+    margin-top: 34px;
+  }
+
+  .visual-card-main {
+    right: 0;
+    width: 76%;
+    height: 180px;
+  }
+
+  .visual-card-small {
+    left: 0;
+    bottom: 0;
+    width: 64%;
+    height: 95px;
+  }
+
+  .page-section {
+    padding: 70px 20px;
+    scroll-margin-top: 110px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .about-grid,
+  .hobby-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-area {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav {
+    font-size: 13px;
+  }
+
+  .hero-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+}

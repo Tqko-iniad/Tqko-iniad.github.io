@@ -1,43 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <style>
-    body {
-        font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f4f7f6;
-    }
-    h1 {
-        color: #2c3e50;
-        border-bottom: 2px solid #2c3e50;
-        padding-bottom: 10px;
-    }
-    ul {
-        background: white;
-        padding: 20px 40px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    li {
-        margin-bottom: 10px;
-    }
-</style>
-    <meta charset="UTF-8">
-    <title>自己紹介</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kota Profile</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>こんにちは、[名前]です！</h1>
-    <p>GitHub Pagesを使って自己紹介サイトを作っています。</p>
-    <h2>興味のあること</h2>
-    <ul>
-        <li>プログラミング</li>
-        <li>コンピュータハードウェア</li>
-        <li>料理</li>
-    </ul>
-    <img src="profile.jpg" alt="プロフィール写真" style="width: 200px; border-radius: 50%;">
+  <!-- 固定ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="site-title">Kota Profile</a>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#hobby">Hobby</a>
+        <a href="#skill">Skill</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- トップ / ヒーローセクション -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-label">Student Profile Site</p>
+        <h1>Kota Profile</h1>
+        <p class="hero-text">大学生活と趣味を紹介する自己紹介サイト</p>
+        <button class="primary-button" id="viewAboutButton">自己紹介を見る</button>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-card visual-card-main image-frame">
+          <!-- ここに画像を入力 -->
+          <img class="changeable-image" src="images/main.jpg" alt="トップ画面のメイン画像">
+          <span>MAIN IMAGE</span>
+        </div>
+        <div class="visual-card visual-card-small">
+          <span>HTML / CSS / Python</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aboutセクション -->
+    <section class="page-section" id="about">
+      <div class="section-heading">
+        <p class="section-label">About</p>
+        <h2>自己紹介</h2>
+      </div>
+
+      <div class="profile-area">
+        <div class="profile-image image-frame">
+          <!-- ここに画像を入力 -->
+          <img class="changeable-image" src="images/profile.jpg" alt="プロフィール画像">
+          <span>PROFILE IMAGE</span>
+        </div>
+        <p>
+          Kotaです。静岡県出身で、好きなものはさわやか、ゲーム、アニメです。
+          大学ではプログラミングを学びながら、少しずつできることを増やしています。
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="info-card">
+          <p class="card-label">Name</p>
+          <h3>名前</h3>
+          <p>Kota</p>
+        </article>
+        <article class="info-card">
+          <p class="card-label">From</p>
+          <h3>出身地</h3>
+          <p>静岡県</p>
+        </article>
+        <article class="info-card">
+          <p class="card-label">Campus Life</p>
+          <h3>大学生活</h3>
+          <p>授業や課題に取り組みながら、Web制作やプログラミングを少しずつ学んでいます。</p>
+        </article>
+        <article class="info-card">
+          <p class="card-label">Message</p>
+          <h3>ひとこと</h3>
+          <p>明るく親しみやすい雰囲気を大切にしながら、新しいことに挑戦していきたいです。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Hobbyセクション -->
+    <section class="page-section light-section" id="hobby">
+      <div class="section-heading">
+        <p class="section-label">Hobby</p>
+        <h2>趣味</h2>
+      </div>
+
+      <div class="hobby-grid">
+        <article class="hobby-card">
+          <div class="hobby-image anime-image image-frame">
+            <!-- ここに画像を入力 -->
+            <img class="changeable-image" src="images/anime.jpg" alt="アニメのイメージ画像">
+            <span>ANIME</span>
+          </div>
+          <div class="hobby-body">
+            <p class="category-label">Watching</p>
+            <h3>アニメを見ること</h3>
+            <p>休日や空き時間にアニメを見て、物語やキャラクターの世界を楽しんでいます。</p>
+          </div>
+        </article>
+
+        <article class="hobby-card">
+          <div class="hobby-image game-image image-frame">
+            <!-- ここに画像を入力 -->
+            <img class="changeable-image" src="images/game.jpg" alt="ゲームのイメージ画像">
+            <span>GAME</span>
+          </div>
+          <div class="hobby-body">
+            <p class="category-label">Communication</p>
+            <h3>友達とゲームをすること</h3>
+            <p>友達と話しながらゲームをする時間が好きです。協力したり競い合ったりして楽しんでいます。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skillセクション -->
+    <section class="page-section" id="skill">
+      <div class="section-heading">
+        <p class="section-label">Skill</p>
+        <h2>学習中のスキル</h2>
+      </div>
+
+      <p class="skill-intro">
+        現在は、Webページの基本となるHTML・CSSと、プログラミングの基礎としてPythonを学習中です。
+        まだ勉強中ですが、見やすく使いやすいページを作れるように練習しています。
+      </p>
+
+      <div class="skill-list">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">Python</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Kota Profile</p>
+    <button class="back-to-top" id="backToTopButton">ページ上部へ戻る</button>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
